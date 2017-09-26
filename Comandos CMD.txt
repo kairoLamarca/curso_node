@@ -1,0 +1,17 @@
+Verificar versão do node.js
+node -v
+
+Iniciar o NPM para criar o package.json
+nom init //dentro do diretorio
+
+//baixar o express no projeto e o -save ja salva os arquivos para que possa ser copiado depois e nao precise baixar novamente
+npm install express -save
+
+//Instalar o ejs
+npm install ejs --save
+
+//instalar o nodemon
+npm install -g nodemon
+
+//agora executa o servidor com o nodemon
+>nodemon app.js

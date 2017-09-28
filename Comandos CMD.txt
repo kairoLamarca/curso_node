@@ -15,3 +15,7 @@ npm install -g nodemon
 
 //agora executa o servidor com o nodemon
 >nodemon app.js
+
+//instala o modulo do mysql
+npm install mysql --save
+

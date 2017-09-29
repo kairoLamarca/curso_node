@@ -19,3 +19,5 @@ npm install -g nodemon
 //instala o modulo do mysql
 npm install mysql --save
 
+//instalando o consign
+npm install consign --save

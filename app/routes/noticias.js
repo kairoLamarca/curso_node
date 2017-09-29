@@ -1,10 +1,12 @@
-var dbConnection = require('../../config/dbConnection');//recuperando a função
+//var dbConnection = require('../../config/dbConnection');//recuperando a função
 
 module.exports = function(app){
 
-	var connection = dbConnection();//executando a função
+	//var connection = dbConnection();//executando a função	
 
 	app.get('/noticias', function(req, res){
+
+		var connection = app.config.dbConnection();//dbConnection vem no app por causa do consign
 
 		//connection.query(<sql>, <func callback>)
 		connection.query('select * from noticias', function(error, result){

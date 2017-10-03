@@ -1,4 +1,4 @@
-Verificar vers�o do node.js
+Verificar vers? do node.js
 node -v
 
 Iniciar o NPM para criar o package.json
@@ -21,3 +21,14 @@ npm install mysql --save
 
 //instalando o consign
 npm install consign --save
+
+-----------------------------------
+
+Anotações
+
+Sublime Encoding
+Preferences > settings
+"fallback_encoding": "UTF-8"
+
+//instala o módulo body-parser
+npm install body-parser --save

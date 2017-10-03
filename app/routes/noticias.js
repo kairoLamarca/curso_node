@@ -1,19 +1,20 @@
 //var dbConnection = require('../../config/dbConnection');//recuperando a função
 
-module.exports = function(app){
+module.exports = function(application){
 
 	//var connection = dbConnection();//executando a função	
 
-	app.get('/noticias', function(req, res){
+	application.get('/noticias', function(req, res){
 
-		var connection = app.config.dbConnection();//dbConnection vem no app por causa do consign
+		var connection = application.config.dbConnection();//dbConnection vem no app por causa do consign
+		var noticiasModel = application.app.models.noticiasModel;
 
 		//connection.query(<sql>, <func callback>)
-		connection.query('select * from noticias', function(error, result){
-			//res.send(result);
+		noticiasModel.getNoticias(connection, function(error, result){
 			//passa o retorno como um json
 			res.render("noticias/noticias", {noticias: result});
 		});
+		
 	
 		//res.render("noticias/noticias");
 	});

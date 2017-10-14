@@ -2,7 +2,7 @@ Verificar vers? do node.js
 node -v
 
 Iniciar o NPM para criar o package.json
-nom init //dentro do diretorio
+npm init //dentro do diretorio
 
 //baixar o express no projeto e o -save ja salva os arquivos para que possa ser copiado depois e nao precise baixar novamente
 npm install express -save

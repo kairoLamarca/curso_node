@@ -8,10 +8,10 @@ module.exports = function(application){
 		var noticia = req.body;
 
 		var connection = application.config.dbConnection();//dbConnection vem no app por causa do consign
-		var noticiasModel = application.app.models.noticiasModel;
+		var noticiasModel = new application.app.models.NoticiasDAO(connection);
 
 		//connection.query(<sql>, <func callback>)
-		noticiasModel.salvarNoticia(noticia, connection, function(error, result){
+		noticiasModel.salvarNoticia(noticia, function(error, result){
 			//passa o retorno como um json
 			//res.render("noticias/noticias", {noticias: result});
 			res.redirect('/noticias');//redirect para que não ocorra de reenviar o form com o F5 pois foi em post

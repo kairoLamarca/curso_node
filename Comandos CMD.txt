@@ -22,6 +22,9 @@ npm install mysql --save
 //instalando o consign
 npm install consign --save
 
+//instalando o express-validator
+npm install express-validator --save
+
 -----------------------------------
 
 Anotações

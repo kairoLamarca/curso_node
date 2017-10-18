@@ -5,29 +5,30 @@ module.exports = function (application) {
 	//var connection = dbConnection();//executando a função	
 
 	application.get('/noticias', function (req, res) {
+		application.app.controllers.noticias.noticias(application, req, res);
+		
+		// var connection = application.config.dbConnection();//dbConnection vem no app por causa do consign
+		// var noticiasModel = new application.app.models.NoticiasDAO(connection);
 
-		var connection = application.config.dbConnection();//dbConnection vem no app por causa do consign
-		var noticiasModel = new application.app.models.NoticiasDAO(connection);
-
-		//connection.query(<sql>, <func callback>)
-		noticiasModel.getNoticias(function (error, result) {
-			//passa o retorno como um json
-			res.render("noticias/noticias", { noticias: result });
-		});
-
+		// //connection.query(<sql>, <func callback>)
+		// noticiasModel.getNoticias(function (error, result) {
+		// 	//passa o retorno como um json
+		// 	res.render("noticias/noticias", { noticias: result });
+		// });
 
 		//res.render("noticias/noticias");
 	});
 
 	application.get('/noticia', function (req, res) {
+		application.app.controllers.noticias.noticia(application, req, res);
 
-		var connection = application.config.dbConnection();//dbConnection vem no app por causa do consign
-		var noticiasModel = new application.app.models.NoticiasDAO(connection);
+		// var connection = application.config.dbConnection();//dbConnection vem no app por causa do consign
+		// var noticiasModel = new application.app.models.NoticiasDAO(connection);
 
-		//connection.query(<sql>, <func callback>)
-		noticiasModel.getNoticia(function (error, result) {
-			//passa o retorno como um json
-			res.render("noticias/noticia", { noticia: result });
-		});
+		// //connection.query(<sql>, <func callback>)
+		// noticiasModel.getNoticia(function (error, result) {
+		// 	//passa o retorno como um json
+		// 	res.render("noticias/noticia", { noticia: result });
+		// });
 	});
 };
